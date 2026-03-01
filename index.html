@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elementum — HTML Showcase</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════════ HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-mark">✦</span>
+                <span class="logo-text">Elementum</span>
+            </div>
+            <nav class="primary-nav" aria-label="Primary Navigation">
+                <ul>
+                    <li><a href="#typography">Type</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#lists">Lists</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#interactive">Interactive</a></li>
+                </ul>
+            </nav>
+            <button class="nav-cta" type="button">Get Started</button>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════ HERO -->
+    <section class="hero" aria-label="Hero Section">
+        <div class="hero-kicker">The Complete Reference</div>
+        <h1 class="hero-title">Every<br /><em>HTML Element</em><br />Beautiful.</h1>
+        <p class="hero-sub">A living catalogue of semantic markup — forms, media, lists, tables, and everything in
+            between, styled with intention and care.</p>
+        <div class="hero-actions">
+            <a href="#forms" class="btn btn--primary">Explore Elements</a>
+            <a href="#typography" class="btn btn--ghost">View Typography</a>
+        </div>
+        <div class="hero-ticker" aria-hidden="true">
+            <span>Semantic HTML &nbsp;·&nbsp; Accessible Markup &nbsp;·&nbsp; Beautiful UI &nbsp;·&nbsp; Modern CSS
+                &nbsp;·&nbsp; Semantic HTML &nbsp;·&nbsp; Accessible Markup &nbsp;·&nbsp; Beautiful UI &nbsp;·&nbsp;
+                Modern CSS &nbsp;·&nbsp;</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ MAIN -->
+    <main>
+
+        <!-- ─── TYPOGRAPHY ─────────────────────────────── -->
+        <section id="typography" class="section">
+            <div class="section-label">01 / Typography</div>
+            <div class="section-grid">
+
+                <div class="section-intro">
+                    <h2>The Typographic<br /><em>Scale</em></h2>
+                    <p>From display headers down to fine-print captions, every level of the typographic hierarchy
+                        deserves its own voice.</p>
+                </div>
+
+                <div class="content-col">
+                    <article class="card card--type">
+                        <h1>Heading One</h1>
+                        <h2>Heading Two</h2>
+                        <h3>Heading Three</h3>
+                        <h4>Heading Four</h4>
+                        <h5>Heading Five</h5>
+                        <h6>Heading Six</h6>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card-title">Inline Elements</h3>
+                        <p>This paragraph contains <strong>bold text for emphasis</strong>, some <em>italic prose for
+                                nuance</em>, a <u>underlined phrase</u>, <mark>highlighted content</mark>, a
+                            <code>code snippet</code>, and a <a href="#">hyperlink</a>. You can also show
+                            <sup>superscript</sup> and <sub>subscript</sub>, or use <del>deleted text</del> and
+                            <ins>inserted text</ins>.
+                        </p>
+                        <p class="text-small">Small text appears here for captions and legal copy.</p>
+                        <blockquote>
+                            <p>"Good design is as little design as possible."</p>
+                            <cite>— Dieter Rams</cite>
+                        </blockquote>
+                        <pre><code>const greet = (name) => {
+  return `Hello, ${name}!`;
+};</code></pre>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ─── FORMS ──────────────────────────────────── -->
+        <section id="forms" class="section section--dark">
+            <div class="section-label">02 / Forms</div>
+            <div class="section-grid">
+
+                <div class="section-intro">
+                    <h2>Forms &amp;<br /><em>Inputs</em></h2>
+                    <p>Every input type, every control — built for clarity and usability.</p>
+                </div>
+
+                <div class="content-col">
+                    <form class="card form-card" novalidate>
+                        <h3 class="card-title">Contact Form</h3>
+
+                        <div class="form-row">
+                            <div class="field">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="fname" placeholder="Ada"
+                                    autocomplete="given-name" />
+                            </div>
+                            <div class="field">
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lname" placeholder="Lovelace"
+                                    autocomplete="family-name" />
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="ada@example.com"
+                                autocomplete="email" />
+                        </div>
+
+                        <div class="field">
+                            <label for="url">Website</label>
+                            <input type="url" id="url" name="url" placeholder="https://example.com" />
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000"
+                                autocomplete="tel" />
+                        </div>
+
+                        <div class="field">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="" disabled selected>Choose a topic…</option>
+                                <option value="design">Design</option>
+                                <option value="dev">Development</option>
+                                <option value="collab">Collaboration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Your message here…"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date" />
+                        </div>
+
+                        <div class="field">
+                            <label for="range">Priority Level <span class="range-val" id="range-out">5</span></label>
+                            <input type="range" id="range" name="range" min="1" max="10" value="5"
+                                oninput="document.getElementById('range-out').textContent=this.value" />
+                        </div>
+
+                        <div class="field">
+                            <label for="color">Preferred Color</label>
+                            <input type="color" id="color" name="color" value="#c8a97e" />
+                        </div>
+
+                        <fieldset class="field-set">
+                            <legend>Availability</legend>
+                            <label class="check-label"><input type="checkbox" name="avail" value="mon" />
+                                Mondays</label>
+                            <label class="check-label"><input type="checkbox" name="avail" value="wed" checked />
+                                Wednesdays</label>
+                            <label class="check-label"><input type="checkbox" name="avail" value="fri" />
+                                Fridays</label>
+                        </fieldset>
+
+                        <fieldset class="field-set">
+                            <legend>Preferred Contact</legend>
+                            <label class="check-label"><input type="radio" name="contact" value="email" checked />
+                                Email</label>
+                            <label class="check-label"><input type="radio" name="contact" value="phone" /> Phone</label>
+                            <label class="check-label"><input type="radio" name="contact" value="video" /> Video
+                                Call</label>
+                        </fieldset>
+
+                        <div class="field field--search">
+                            <label for="search">Search</label>
+                            <input type="search" id="search" name="search" placeholder="Search anything…" />
+                        </div>
+
+                        <div class="field">
+                            <label for="file">Upload File</label>
+                            <input type="file" id="file" name="file" accept=".pdf,.doc,.docx" />
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn--primary">Send Message</button>
+                            <button type="reset" class="btn btn--outline">Reset</button>
+                            <button type="button" class="btn btn--ghost" disabled>Disabled</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ─── LISTS ──────────────────────────────────── -->
+        <section id="lists" class="section">
+            <div class="section-label">03 / Lists</div>
+            <div class="section-grid">
+
+                <div class="section-intro">
+                    <h2>Lists &amp;<br /><em>Structure</em></h2>
+                    <p>Ordered, unordered, and definition lists — each with a distinct visual personality.</p>
+                </div>
+
+                <div class="content-col content-col--triple">
+
+                    <article class="card">
+                        <h3 class="card-title">Unordered List</h3>
+                        <ul class="styled-list">
+                            <li>Visual Design Principles</li>
+                            <li>Color Theory &amp; Palettes</li>
+                            <li>Typography Systems
+                                <ul>
+                                    <li>Serif Typefaces</li>
+                                    <li>Sans-Serif Families</li>
+                                    <li>Monospaced Fonts</li>
+                                </ul>
+                            </li>
+                            <li>Grid &amp; Layout</li>
+                            <li>Motion &amp; Animation</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card-title">Ordered List</h3>
+                        <ol class="styled-list styled-list--ol">
+                            <li>Define the Problem</li>
+                            <li>Research &amp; Discover</li>
+                            <li>Ideate Solutions</li>
+                            <li>Prototype Quickly</li>
+                            <li>Test &amp; Iterate</li>
+                            <li>Ship with Confidence</li>
+                        </ol>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card-title">Definition List</h3>
+                        <dl class="def-list">
+                            <dt>Semantics</dt>
+                            <dd>Meaning conveyed through proper HTML element choice and structure.</dd>
+                            <dt>Accessibility</dt>
+                            <dd>Designing so all users, including those with disabilities, can use the interface.</dd>
+                            <dt>Progressive Enhancement</dt>
+                            <dd>Building from a solid baseline, layering in richer experiences.</dd>
+                        </dl>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── TABLE ─────────────────────────────────── -->
+        <section id="table" class="section section--warm">
+            <div class="section-label">04 / Data Table</div>
+            <div class="section-grid section-grid--full">
+
+                <div class="section-intro">
+                    <h2>Tables &amp;<br /><em>Data</em></h2>
+                    <p>Structured information presented clearly with <code>&lt;thead&gt;</code>,
+                        <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>.
+                    </p>
+                </div>
+
+                <div class="content-col">
+                    <div class="card card--overflow">
+                        <h3 class="card-title">Project Status</h3>
+                        <table>
+                            <caption>Q1 2025 Design Sprint Overview</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Project</th>
+                                    <th scope="col">Owner</th>
+                                    <th scope="col">Due Date</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Progress</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Design System</td>
+                                    <td>Ada L.</td>
+                                    <td>Mar 15</td>
+                                    <td><span class="badge badge--green">Active</span></td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width:78%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Landing Page</td>
+                                    <td>Grace H.</td>
+                                    <td>Mar 22</td>
+                                    <td><span class="badge badge--yellow">Review</span></td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width:55%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile App</td>
+                                    <td>Alan T.</td>
+                                    <td>Apr 01</td>
+                                    <td><span class="badge badge--blue">Planning</span></td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width:20%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>API Docs</td>
+                                    <td>Linus T.</td>
+                                    <td>Feb 28</td>
+                                    <td><span class="badge badge--gray">Done</span></td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width:100%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4">4 Projects · Q1 2025</td>
+                                    <td>Avg. 63%</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ─── MEDIA ──────────────────────────────────── -->
+        <section id="media" class="section">
+            <div class="section-label">05 / Media</div>
+            <div class="section-grid">
+
+                <div class="section-intro">
+                    <h2>Media &amp;<br /><em>Embeds</em></h2>
+                    <p>Images, figures, audio, video, and iframe embeds handled with semantic care.</p>
+                </div>
+
+                <div class="content-col content-col--double">
+
+                    <figure class="card figure-card">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+                            alt="Abstract geometric shapes in warm tones" loading="lazy" />
+                        <figcaption>Fig. 1 — Abstract composition, Unsplash. Images paired with
+                            <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="card figure-card">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80"
+                            alt="Laptop on a minimal desk workspace" loading="lazy" />
+                        <figcaption>Fig. 2 — Clean workspace. The <code>loading="lazy"</code> attribute defers
+                            off-screen images.</figcaption>
+                    </figure>
+
+                    <article class="card card--span2">
+                        <h3 class="card-title">Audio Element</h3>
+                        <audio controls class="audio-player">
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                                type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p class="text-small">Semantic audio with native controls, respecting user preferences for media
+                            playback.</p>
+                    </article>
+
+                    <article class="card card--span2">
+                        <h3 class="card-title">Video Element</h3>
+                        <video controls poster="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80"
+                            class="video-player">
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                            Your browser does not support the video element.
+                        </video>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── INTERACTIVE ────────────────────────────── -->
+        <section id="interactive" class="section section--dark">
+            <div class="section-label">06 / Interactive</div>
+            <div class="section-grid">
+
+                <div class="section-intro">
+                    <h2>Interactive<br /><em>Elements</em></h2>
+                    <p>Details, summaries, dialogs, progress bars, and meters — the interactive layer of HTML.</p>
+                </div>
+
+                <div class="content-col content-col--triple">
+
+                    <article class="card">
+                        <h3 class="card-title">Details &amp; Summary</h3>
+                        <details>
+                            <summary>What is semantic HTML?</summary>
+                            <p>Semantic HTML uses elements that describe the meaning of the content —
+                                <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code> —
+                                rather than just its presentation.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Why accessibility matters?</summary>
+                            <p>Over a billion people live with some form of disability. Accessible design ensures
+                                everyone can use your product, and it's often legally required.</p>
+                        </details>
+                        <details open>
+                            <summary>Open by default</summary>
+                            <p>The <code>open</code> attribute renders this panel expanded on load. Users can still
+                                toggle it.</p>
+                        </details>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card-title">Progress &amp; Meter</h3>
+                        <div class="meter-group">
+                            <label>Upload Progress</label>
+                            <progress value="72" max="100" class="native-progress">72%</progress>
+                        </div>
+                        <div class="meter-group">
+                            <label>Disk Usage</label>
+                            <meter value="60" min="0" max="100" low="20" high="80" optimum="40">60%</meter>
+                        </div>
+                        <div class="meter-group">
+                            <label>Battery Level</label>
+                            <meter value="85" min="0" max="100" low="15" high="50" optimum="90">85%</meter>
+                        </div>
+                        <div class="meter-group">
+                            <label>CPU Load</label>
+                            <meter value="92" min="0" max="100" low="50" high="80" optimum="30">92%</meter>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card-title">Button Variants</h3>
+                        <div class="btn-grid">
+                            <button type="button" class="btn btn--primary">Primary</button>
+                            <button type="button" class="btn btn--secondary">Secondary</button>
+                            <button type="button" class="btn btn--outline">Outline</button>
+                            <button type="button" class="btn btn--ghost">Ghost</button>
+                            <button type="button" class="btn btn--danger">Danger</button>
+                            <button type="button" class="btn btn--primary btn--sm">Small</button>
+                            <button type="button" class="btn btn--primary btn--lg">Large</button>
+                            <button type="button" class="btn btn--primary" disabled>Disabled</button>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="card-title">Abbreviations &amp; Quotes</h3>
+                        <p>The <abbr title="World Wide Web Consortium">W3C</abbr> defines web standards. The <abbr
+                                title="HyperText Markup Language">HTML</abbr> specification is maintained alongside
+                            <abbr title="Cascading Style Sheets">CSS</abbr> and <abbr title="JavaScript">JS</abbr>.
+                        </p>
+                        <hr />
+                        <p>Inline <q>short quotations use the q element</q> and render with typographic quote marks
+                            automatically.</p>
+                        <p><time datetime="2025-01-01">January 1st, 2025</time> — use the <code>&lt;time&gt;</code>
+                            element for machine-readable dates.</p>
+                        <p>An output element result: <output for="range" id="out-display">5</output></p>
+                        <address>
+                            Written by <a href="mailto:hello@elementum.dev">Ada Lovelace</a><br />
+                            123 Design Street, Webtown
+                        </address>
+                    </article>
+
+                    <article class="card card--span2">
+                        <h3 class="card-title">Scrollable Region</h3>
+                        <div class="scroll-region" role="region" aria-label="Scrollable content" tabindex="0">
+                            <p>This region has a fixed height and scrolls vertically. Scroll regions should have
+                                explicit height, <code>overflow: auto</code>, and be keyboard-focusable via
+                                <code>tabindex="0"</code> so keyboard users can scroll within them.
+                            </p>
+                            <p>Design systems often use scroll regions for code blocks, log outputs, chat interfaces,
+                                data feeds, and constrained content containers. The scrollbar itself can be styled via
+                                vendor-prefixed pseudo-elements for a consistent cross-browser appearance.</p>
+                            <p>Always ensure sufficient contrast between scrollbar thumb and track. Consider
+                                <code>scroll-behavior: smooth</code> for anchor navigation and
+                                <code>overscroll-behavior: contain</code> to prevent scroll chaining to parent elements.
+                            </p>
+                            <p>Padding at the bottom of scrollable containers prevents the last line of content from
+                                touching the edge of the scroll boundary, which feels uncomfortable to users.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── NOTICE / ASIDE ─────────────────────────── -->
+        <section class="section section--accent">
+            <div class="notice-grid">
+                <aside class="aside-card">
+                    <h3>📌 Did You Know?</h3>
+                    <p>HTML5 introduced over 30 new semantic elements. Using them correctly improves
+                        <strong>SEO</strong>, <strong>accessibility</strong>, and code maintainability without any
+                        additional JavaScript.
+                    </p>
+                </aside>
+                <aside class="aside-card aside-card--highlight">
+                    <h3>🔖 Pro Tip</h3>
+                    <p>Validate your markup at <code>validator.w3.org</code>. Even a single malformed tag can cascade
+                        into unexpected rendering issues across browsers and assistive technologies.</p>
+                </aside>
+                <aside class="aside-card">
+                    <h3>⚡ Performance</h3>
+                    <p>Semantic HTML reduces the need for ARIA roles, trimming markup and improving rendering speed.
+                        Native elements come with built-in keyboard behavior for free.</p>
+                </aside>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════ FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-mark">✦</span>
+                    <span class="logo-text">Elementum</span>
+                </div>
+                <p>A complete showcase of semantic HTML elements, beautifully styled with modern CSS.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <h4>Elements</h4>
+                <ul>
+                    <li><a href="#typography">Typography</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#lists">Lists</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#interactive">Interactive</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-nav" aria-label="Resources Navigation">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a></li>
+                    <li><a href="https://w3.org" target="_blank" rel="noopener">W3C Standards</a></li>
+                    <li><a href="https://validator.w3.org" target="_blank" rel="noopener">HTML Validator</a></li>
+                    <li><a href="https://a11yproject.com" target="_blank" rel="noopener">A11Y Project</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <small>&copy; 2025 Elementum. Crafted with semantic HTML &amp; modern CSS.</small>
+            <small>No frameworks. No dependencies. Just the web.</small>
+        </div>
+    </footer>
+
+</body>
+
+</html>
